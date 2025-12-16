@@ -14,7 +14,7 @@ low level driver for MAX7219 / MAX7221 based LED matrix
 
 
 ## description
-This is a simple low level driver for dot matrix displays based on MAX7219 or MAX7221 drivers.  
+This is a simple low level driver for dot matrix displays based on MAX7219 or MAX7221 drivers for Adrduino based systems.  
 it is designed to work with or without a display buffer. If the drivers are used wtih 7 segment displays one might want to add a few functions to set font translation and decimal dot.
 if you need more features such as text or graphic you might want to use an other display driver or use this one as a base for your features
 
@@ -22,7 +22,11 @@ if you need more features such as text or graphic you might want to use an other
 ## hardware
 I used [AZ-Delivery's](https://www.az-delivery.de/) [MAX7219 8x32 4 in 1 Dot Matrix LED Modul](https://www.az-delivery.de/products/4-x-64er-led-matrix-display?_pos=3&_psq=led+matrix&_ss=e&_v=1.0).
 This is a 4x 8x8 MAX7219 base LED matrix modul.
-There are many other moduls available on Amazon, Ali and ebeay
+There are many other moduls available on Amazon, Ali and ebay
+
+if you are using a different layout you will need to change the adress mappen of the setBuffer and setByte functions
+
+the driver uses standard SPI interface. Depending on your HW you might want to add a parameter for the SPI-Interface and use the aoutmaten CS Feature available on some devices
 
 
 This is the adressing scheme of the modul
